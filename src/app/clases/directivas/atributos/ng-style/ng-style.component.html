@@ -1,0 +1,13 @@
+<div>
+    <h3>Ejemplo 1 - Editando estilos dinámicamente</h3>
+    <input title="color" id="chb" type="checkbox" (change)="colorCheck = !colorCheck" /> Cambiar color
+    <br>
+    <input title="altura" id="chb1" type="number" (input)="anchuraAltura = $any($event.target).value" value="100" /> Cambiar tamaño
+    <br><br>
+
+    <div class="cuadrado" [ngStyle]="{ 'background-color': colorCheck ? 'blue' : 'red' }"></div>
+    <br /><br />
+
+    <div class="cuadrado" [ngStyle]="{ 'background-color': colorCheck ? 'blue' : 'red', 'width': anchuraAltura + 'px', 
+      'height': anchuraAltura + 'px' }"></div>
+</div>

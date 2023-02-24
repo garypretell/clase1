@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-clase33',
-  templateUrl: './clase33.component.html',
-  styleUrls: ['./clase33.component.css']
+  selector: 'app-interpolacion',
+  templateUrl: './interpolacion.component.html',
+  styleUrls: ['./interpolacion.component.css']
 })
-export class Clase33Component {
+export class InterpolacionComponent {
   nombre: string = 'CLASE 03';
   direccion: string = 'CLASE 03';
   persona: any = {
