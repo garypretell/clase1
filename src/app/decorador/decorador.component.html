@@ -1,0 +1,30 @@
+<div class="p-5 m-5 box" [ngStyle]="{'border': '1px', 'border-style': 'solid', 'border-color': 'turquoise'}">
+    <h1>COMPONENTE PADRE</h1>
+<br>
+<div class="field">
+    <label class="label">Enviar Datos de Padre a Hijo(@Input):</label>
+    <div class="control">
+      <input class="input is-primary" title="texto" type="text" [(ngModel)]="textoPadreHijo">
+    </div>
+  </div>
+<br>
+<p *ngIf="textoHijoPadre">
+    Esto se muestra cuando existe texto de Hijo hacia Padre (@Output), el texto es  <strong> {{ textoHijoPadre }} </strong>
+</p>
+<hr>
+<div class="border border-secondary p-3 m-3">
+    <h3>COMPONENTE HIJO</h3>
+    <app-decorador-input [textoPadreHijo]="textoPadreHijo"></app-decorador-input>
+    <br>
+    <app-decorador-output (textoHijoPadre)="showTextoHijoPadre($event)"></app-decorador-output>
+</div>
+</div>
+
+
+<div class="mb-2">
+    <app-dynamic-button [type]="buttonTypePrimary" [title]="'Botón de Prueba Avanzado'" (action)="dynamicModal.toggleModal()" ></app-dynamic-button>
+</div>
+
+
+<app-dynamic-modal [title]="title" #dynamicModal ></app-dynamic-modal>
+

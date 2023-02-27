@@ -12,6 +12,7 @@ import { NgIfComponent } from './clases/directivas/estructurales/ng-if/ng-if.com
 
 import { NgSwitchComponent } from './clases/directivas/estructurales/ng-switch/ng-switch.component';
 import { InterpolacionComponent } from './clases/interpolacion/interpolacion.component';
+import { TestDynamicComponentComponent } from './clases/test-dynamic-component/test-dynamic-component.component';
 import { TwoWayDataBindingComponent } from './clases/two-way-data-binding/two-way-data-binding.component';
 
 const routes: Routes = [
@@ -74,6 +75,14 @@ const routes: Routes = [
       },
     ]
   },
+  {
+    path: 'decorador',
+    loadChildren: () => import('./decorador/decorador.module')
+  },
+  {
+    path: 'test-dynamic-component',
+    component: TestDynamicComponentComponent
+  }
 ];
 
 @NgModule({

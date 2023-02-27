@@ -1,0 +1,5 @@
+<div class="m-3 p-5 box" [ngStyle]="{'border': '1px', 'border-style': 'solid', 'border-color': 'blue'}">
+    <p>{{'decorador-output' | uppercase}}</p>
+    <input class="input is-primary" title="texto" type="text" [(ngModel)]="textoEmitido" (ngModelChange)="textoHijoPadre.emit(textoEmitido)">
+</div>
+

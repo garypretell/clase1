@@ -16,7 +16,9 @@ import { NgStyleComponent } from './clases/directivas/atributos/ng-style/ng-styl
 import { NgClassComponent } from './clases/directivas/atributos/ng-class/ng-class.component';
 import { NgIfComponent } from './clases/directivas/estructurales/ng-if/ng-if.component';
 import { NgForComponent } from './clases/directivas/estructurales/ng-for/ng-for.component';
-
+import { StandAloneComponent } from './stand-alone/stand-alone.component';
+import { SharedModule } from './shared/shared.module';
+import { TestDynamicComponentComponent } from './clases/test-dynamic-component/test-dynamic-component.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +34,15 @@ import { NgForComponent } from './clases/directivas/estructurales/ng-for/ng-for.
     NgForComponent,
     NgSwitchComponent,
     NgStyleComponent,
-    NgClassComponent
+    NgClassComponent,
+    TestDynamicComponentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    StandAloneComponent,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
