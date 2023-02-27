@@ -1,24 +1,24 @@
 <h2>Binding de Eventos</h2>
 <a href="https://www.w3schools.com/js/js_events_examples.asp" target="_blank" rel="noopener">Link de Eventos</a>
 <p>*Se usan los mismos eventos, quitando la palabra <strong>ON</strong></p>
-
-<div>
+<hr>
+<div class="mb-2">
   <h3>Ejemplo 1 - Binding de evento con un botón</h3>
-  <button (click)="incrementar()" class="ml-5 rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Incrementar Contador</button> <br />
+  <button (click)="incrementar()" class="ml-5 button is-primary">Incrementar Contador</button> <br />
   Contador: {{ cantidad }}
 </div>
 
-<div>
+<div class="mb-2">
   <h3>Ejemplo 2 - Binding de evento sin una función</h3>
-  <button (click)="cantidad = cantidad + 1" class="ml-5 rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Incrementar Contador</button> <br />
+  <button (click)="cantidad = cantidad + 1" class="ml-5 button is-link">Incrementar Contador</button> <br />
   Contador: {{ cantidad }}
 </div>
 
-<div>
+<div class="mb-2">
   <h3>Ejemplo 3 - Otros eventos y objeto especial $event</h3>
   <div class="flex rounded-md shadow-sm">
 
-    <input title="eventos" (input)="onTextboxInput($event)" class="block w-full flex-1 rounded-none rounded-r-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="www.example.com">
+    <input title="eventos" (input)="onTextboxInput($event)"  class="input is-info" placeholder="www.example.com">
   </div>
   <br>
   Texto escrito: {{textoEscrito}}

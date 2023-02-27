@@ -6,10 +6,11 @@
         <button class="delete" aria-label="close" (click)="isModalActive = false"></button>
       </header>
       <section class="modal-card-body">
-        <!-- Content ... -->
+        <ng-content select="[title]"></ng-content>
+        <ng-content select="[message]"></ng-content>
       </section>
       <footer class="modal-card-foot">
-        <button class="button is-success">Save changes</button>
+        <button class="button is-success mr-2">Save changes</button>
         <button class="button" (click)="isModalActive = false">Cancel</button>
       </footer>
     </div>

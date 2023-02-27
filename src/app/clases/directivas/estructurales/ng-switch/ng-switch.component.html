@@ -2,11 +2,13 @@
     <h3>Ejemplo 1 - ngSwitch</h3>
   
     Seleccione una opción
-    <select title="opcion" (change)="opcion = $any($event.target).value">
-      <option>--Seleccione una opción--</option>
-      <option value="ASP.NET">ASP.NET</option>
-      <option value="Angular">Angular</option>
-    </select>
+    <div class="select">
+      <select title="opcion" (change)="opcion = $any($event.target).value">
+        <option>--Seleccione una opción--</option>
+        <option value="ASP.NET">ASP.NET</option>
+        <option value="Angular">Angular</option>
+      </select>
+    </div>
   
     <div [ngSwitch]="opcion">
       <div *ngSwitchDefault>Debe escoger una opcion</div>

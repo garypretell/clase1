@@ -1,32 +1,31 @@
-<div>
+<div class="mb-2">
     <h3>Ejemplo 1 - Mostrar el valor de una variable en el HTML</h3>
     <p>El valor de direccion es: {{direccion}}</p>
-
     <p>El nombre de la persona es {{persona.nombre}} {{persona.apellido}}</p>
 </div>
 
-<div>
+<div class="mb-2">
     <h3>Ejemplo 2 - Evaluar expresiones</h3>
     <p>La suma de 2 y 2 es {{2 + 2}}</p>
 </div>
 
-<div>
+<div class="mb-2">
     <h3>Ejemplo 3 - Evaluar una función</h3>
     <p>Hola mundo repetido es: {{duplicarTexto('hola mundo')}}</p>
 </div>
 
-<div>
+<div class="mb-2">
     <h3>Ejemplo 4 - Usando el operador de navegación segura (?.)</h3>
     <p>La propiedad edad no existe: {{persona?.edad}}</p>
 </div>
 
-<div>
+<div class="mb-2">
     <h3>Ejemplo 5 - Podemos hacer varias cosas al mismo tiempo:</h3>
     <p>{{ 'Podemos concatenar strings: ' + duplicarTexto(persona.nombre)}}</p>
 </div>
 
-<div>
+<div class="mb-2">
     <h3>Ejemplo 6 - Podemos usar variables de referencia de plantilla</h3>
-    <p #miparrafo>este es un parrafo de prueba</p>
-    <input title="parrafo" value="{{miparrafo.innerHTML}}">
-  </div>
+    <p #miparrafo class="mb-2">este es un parrafo de prueba</p>
+    <input class="input is-primary" title="parrafo" value="{{miparrafo.innerHTML}}">
+</div>
