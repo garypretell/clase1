@@ -19,6 +19,7 @@ import { NgForComponent } from './clases/directivas/estructurales/ng-for/ng-for.
 import { StandAloneComponent } from './stand-alone/stand-alone.component';
 import { SharedModule } from './shared/shared.module';
 import { TestDynamicComponentComponent } from './clases/test-dynamic-component/test-dynamic-component.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { TestDynamicComponentComponent } from './clases/test-dynamic-component/t
     AppRoutingModule,
     FormsModule,
     StandAloneComponent,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

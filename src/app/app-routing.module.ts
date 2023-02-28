@@ -80,6 +80,10 @@ const routes: Routes = [
     loadChildren: () => import('./decorador/decorador.module')
   },
   {
+    path: 'formularios',
+    loadChildren: () => import('./formularios/formularios.module')
+  },
+  {
     path: 'test-dynamic-component',
     component: TestDynamicComponentComponent
   }
