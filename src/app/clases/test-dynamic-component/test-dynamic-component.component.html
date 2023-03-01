@@ -6,6 +6,11 @@
     <app-dynamic-button [type]="buttonTypeLink" [title]="'Botón de Prueba Avanzado(Test)'" (action)="dynamicModal.toggleModal()" ></app-dynamic-button>
 </div>
 
+<div class="mb-2">
+    <app-dynamic-button [type]="buttonTypePrimary" [title]="'Botón de Prueba Avanzado(Test) ViewChild'" (action)="openModal()" ></app-dynamic-button>
+</div>
+
 <app-dynamic-modal [title]="title" #dynamicModal >
     <p message> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, amet! Asperiores reiciendis eius, facere voluptates deleniti quos cupiditate magni omnis iure architecto cumque id? Numquam reprehenderit perspiciatis quos expedita sequi.</p>
 </app-dynamic-modal>
+

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { BTNTYPES } from './shared/dynamic-button/btn-types';
 
 @Component({
   selector: 'app-root',
