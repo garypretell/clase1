@@ -1,0 +1,6 @@
+<div class="help is-danger" *ngIf="control && control.invalid && (control.dirty || control.touched)">
+    <ng-container *ngIf="control?.errors as errors">
+      {{ errors | controlErrorMessage }}
+    </ng-container>
+  </div>
+  

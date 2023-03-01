@@ -26,13 +26,13 @@ export class UsernameUnicoDirective implements AsyncValidator{
 
 }
 
-// @Injectable({providedIn: 'root'})
-// export class UsernameUnicoService implements AsyncValidator  {
-//  constructor(private webApiService: WebApiService) { }
+@Injectable({providedIn: 'root'})
+export class UsernameUnicoService implements AsyncValidator  {
+ constructor(private webApiService: WebApiService) { }
 
-//  validate(control: import("@angular/forms").AbstractControl): Promise<import("@angular/forms").ValidationErrors> | import("rxjs").Observable<import("@angular/forms").ValidationErrors>
-//  {
-//    const usernameUnicoDirective = new UsernameUnicoDirective(this.webApiService);
-//     return usernameUnicoDirective.validate(control);
-//  }
-// }
+ validate(control: import("@angular/forms").AbstractControl): Promise<import("@angular/forms").ValidationErrors> | import("rxjs").Observable<import("@angular/forms").ValidationErrors>
+ {
+   const usernameUnicoDirective = new UsernameUnicoDirective(this.webApiService);
+    return usernameUnicoDirective.validate(control);
+ }
+}

@@ -1,0 +1,77 @@
+<h2>Formulario de Registro de Usuario - Reactivo</h2>
+<form (submit)="submit()" [formGroup]="registerForm">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input title="username" type="text" class="input" formControlName="username">
+        <div *ngIf="$any(username).invalid && ($any(username).dirty || $any(username).touched)"
+            class="alert alert-danger">
+            <div *ngIf="$any(username).errors.required">
+                El nombre de usuario es requerido
+            </div>
+            <div *ngIf="$any(username).errors.usernameUnico">
+                Ese nombre de usuario ya está en uso
+            </div>
+
+        </div>
+
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input title="password" type="password" class="input" formControlName="password">
+
+        <div *ngIf="$any(password).invalid && ($any(password).dirty || $any(password).touched)"
+            class="alert alert-danger">
+            <div *ngIf="$any(password).errors.required">
+                El password es requerido
+            </div>
+            <div *ngIf="$any(password).errors.minlength">
+                La longitud mínima del password es 4 caracteres
+            </div>
+            <div *ngIf="$any(password).errors.passwordValidation">
+                {{$any(password).errors.passwordValidation.message}}
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="form-group">
+        <label for="suscripcion">Escoja el tipo de suscripción</label>
+        <select class="input" id="suscripcion" name="suscripcion" formControlName="suscripcion">
+            <option *ngFor="let suscripcion of suscripciones" [value]="suscripcion.value">{{suscripcion.text}}</option>
+        </select>
+    </div>
+
+    <div class="form-group form-check">
+        <input title="promociones" type="checkbox" class="form-check-input" formControlName="promociones">
+        <label class="form-check-label" for="promociones">Deseo recibir promociones</label>
+    </div>
+
+    <div class="form-group mb-4">
+        <a class="btn btn-primary mb-2" (click)="agregarTelefono()">Agregar Teléfono</a>
+    </div>
+
+    <div formArrayName="telefonos" *ngFor="let telefono of telefonos.controls; let i = index" class="mb-2">
+        <div [formGroupName]="i">
+            <div class="form-group row">
+                <label class="col-md-1" [attr.for]="'telefono' + i">Teléfono</label>
+                <div class="col-md-3">
+                    <input type="text" [attr.id]="'telefono' + i" class="input" formControlName="telefono">
+                </div>
+                <label class="col-md-1" [attr.for]="'descripcion' + i">Descripción</label>
+                <div class="col-md-5">
+                    <input type="text" [attr.id]="'descripcion' + i" class="input" formControlName="descripcion">
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-danger" (click)="removerTelefono(i)">Remover</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <button type="submit" class="button is-primary mr-3" [disabled]="registerForm.invalid">Enviar</button>
+    <button type="button" class="button is-link" (click)="refrescar()">Refrescar</button>
+
+</form>
