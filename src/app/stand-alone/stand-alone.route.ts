@@ -1,9 +1,9 @@
 import { Route } from '@angular/router';
-import { StandAloneComponentComponent } from './stand-alone-component/stand-alone-component.component';
+import { RouteStandAloneComponent } from './route-stand-alone/route-stand-alone.component';
 
 export const ROUTES: Route[] = [
   {
-    path: 'componente',
-    component: StandAloneComponentComponent,
+    path: 'route',
+    component: RouteStandAloneComponent,
   },
 ];
